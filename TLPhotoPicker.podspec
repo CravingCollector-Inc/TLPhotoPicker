@@ -29,9 +29,9 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   # Funding information
-  s.metadata = {
-    'funding_uri' => 'https://github.com/sponsors/tilltue'
-  }
+#   s.metadata = {
+#     'funding_uri' => 'https://github.com/sponsors/tilltue'
+#   }
 
   s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
