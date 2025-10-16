@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TLPhotoPicker'
-  s.version          = '2.1.6'
+  s.version          = '2.1.12'
   s.summary          = 'multiple phassets picker for iOS lib. like facebook'
 
 # This description is used to generate tags and improve search results.
@@ -28,13 +28,23 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/tilltue/TLPhotoPicker.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.1'
+  # Funding information
+  s.metadata = {
+    'funding_uri' => 'https://github.com/sponsors/tilltue'
+  }
+
+  s.ios.deployment_target = '13.0'
   s.swift_version = '5.0'
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 
   s.source_files = 'TLPhotoPicker/Classes/**/*.swift'
   
-  s.resource_bundles = { 'TLPhotoPicker' => ['TLPhotoPicker/Classes/*.xib'] }
+  s.resource_bundles = {
+    'TLPhotoPicker' => [
+      'TLPhotoPicker/Classes/*.xib',
+      'TLPhotoPicker/Resources/PrivacyInfo.xcprivacy'
+    ]
+  }
   s.resources = 'TLPhotoPicker/TLPhotoPickerController.bundle'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
